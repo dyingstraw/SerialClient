@@ -10,8 +10,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+
+
 class Ui_MainWindow(QObject):
     _clickedSignal = pyqtSignal()
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1128, 729)
@@ -20,9 +23,7 @@ class Ui_MainWindow(QObject):
         self.label_Video = QtWidgets.QLabel(self.centralwidget)
         self.label_Video.setGeometry(QtCore.QRect(470, 60, 591, 421))
         self.label_Video.setAutoFillBackground(False)
-        self.label_Video.setStyleSheet("\n"
-"boder:1px\n"
-"")
+        self.label_Video.setStyleSheet("\n" "boder:1px\n" "")
         self.label_Video.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.label_Video.setAlignment(QtCore.Qt.AlignCenter)
         self.label_Video.setObjectName("label_Video")
@@ -204,7 +205,7 @@ class Ui_MainWindow(QObject):
         MainWindow.setStatusBar(self.statusbar)
 
         self.label_tips = QtWidgets.QLabel(MainWindow)
-        
+
         self.label_tips.setGeometry(QtCore.QRect(0, 0, 591, 421))
         self.label_tips.setAutoFillBackground(True)
 
@@ -216,9 +217,6 @@ class Ui_MainWindow(QObject):
         self.label_tips.setFont(font)
         self.label_tips.setText(">>即将采集舌苔，倒计时5秒<<")
         self.label_tips.setVisible(False)
-
-
-
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -242,4 +240,3 @@ class Ui_MainWindow(QObject):
 
     def onClick(self):
         self._clickedSignal.emit()
-
