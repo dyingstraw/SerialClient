@@ -21,6 +21,7 @@ class mainExec(QObject):
         self.ui = Ui_MainWindow()
         # 有人 1-4 人脸识别 面部 舌苔
         self.finishFlag =[0,0,0,0,0,0,0,0]
+        self.allFinnish = False
         self.ticeFlag = False
         self.serial = SerialThread("com2")
         self.camera = CameraThread(0)
@@ -48,10 +49,10 @@ class mainExec(QObject):
             str = instr
             if len(instr)==0:
                     return
-            # 单片机制动开始测量
+            # 第0步：单片机制动开始测量
             if str[4]=="0" and str[5]=="1":
                     self.ticeFlag = True
-                    # 发送指令，让单片机自由测量
+                    # 检测到有人就开始了，发送指令，让单片机自由测量
                     self.serial.send("##SC500000\r\n")
             # 单片机主动关闭测量 
             if str[4]=="0" and str[5]=="0":
@@ -90,12 +91,13 @@ class mainExec(QObject):
                     # 设置提示可见
                     self.ui.label_tips.setVisible(True)
                     self.timerShetai= QTimer(self)
+                    
                     self.timerShetai.timeout.connect(self.shotShetai)
                     self.timeId=self.timerShetai.start(1000)
 
     def uploadProgress(self,str):
         # 告诉单片机体检流程全部结束
-        self.serial.send("##SC500003")
+        self.serial.send("##SC500003\r\n")
         print(str)
     def shotShetai(self):
             # global shetaiCount,timerShetai
@@ -109,7 +111,7 @@ class mainExec(QObject):
             self.serial.send("##SC500002\r\n")
             if(self.shetaiCount>5):
                     self.timerShetai.stop()
-                    # 体检结束
+                    # 体检结束结束
                     self.serial.send("##SC500003\r\n")
                     # 提交上传线程
                     upload = UploadThread()
@@ -123,6 +125,7 @@ class mainExec(QObject):
                     self.ui.label_tips.setFont(font)
                     self.ui.label_tips.setVisible(False)
 
+        
     def cameraProgress(self,str): 
             jpg=QtGui.QPixmap(str).scaled(self.ui.label_Video.width(), self.ui.label_Video.height())
             self.ui.label_Video.setPixmap(jpg)
@@ -131,10 +134,10 @@ class mainExec(QObject):
             self.ui.lineEdit_Name.setText(result["userName"])
             self.ui.lineEdit_ID.setText(result["userId"])
             self.ui.textEdit_Other.setText(result["result"])
-
+        # 按钮按下事件回调函数
     def getUserinfo(self):
             self.camera.setMode("detect")
-            # 正在测面部以及识别个人信息
+            # 第2步：正在测面部以及识别个人信息
             self.serial.send("##SC500001\r\n")
             self.re = RequestThread()
             self.re._signal.connect(self.getUserinfo1)
