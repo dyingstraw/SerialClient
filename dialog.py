@@ -7,11 +7,30 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 import sys
-class Ui_Dialog(object):
+class Ui_Dialog(QMainWindow):
+    def __init__(self):
+        # pass
+        # self.parent = parent
+        super(Ui_Dialog,self).__init__()
+        # self.setupUi(self)
+
+    def accept(self):
+        # print("accept")
+        self.close()
+    def reject(self):
+        # print("reject")
+        self.close()
     def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
+        Dialog.setObjectName("提示")
         Dialog.resize(662, 345)
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
+        self.setWindowOpacity(0.8)
+        # Dialog.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
+        self.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)  
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(390, 250, 201, 41))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
@@ -23,27 +42,50 @@ class Ui_Dialog(object):
         self.msg.setObjectName("msg")
         self.timeBar = QtWidgets.QProgressBar(Dialog)
         self.timeBar.setGeometry(QtCore.QRect(110, 190, 471, 21))
-        self.timeBar.setProperty("value", 24)
+        self.timeBar.setProperty("value", 100)
         self.timeBar.setObjectName("timeBar")
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
         self.buttonBox.rejected.connect(Dialog.reject)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+        
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.msg.setText(_translate("Dialog", "提示：这是一个提示框"))
-    def msgBox(self,time,msg):
-        self.app = QtWidgets.QApplication(sys.argv)
-        self.dialog = QtWidgets.Dialog()
-        self.ui = Ui_Dialog()
-        self.ui.setupUi(self.MainWindow)
-        self.dialog.show()
-        sys.exit(self.app.exec_())
+    def timeProgress(self):
+        if(self.timeBar.value()<=10):
+            self.reject()
+            self.t1.stop()
+        else:
+            self.timeBar.setValue(self.timeBar.value()-self.rate)
+    def msgBox(self,seconds,msg):
+        self.rate = int(10/seconds)      
+     
+        self.setupUi(self)
+        
+        
 
+        self.t1=QTimer()
+        self.t1.timeout.connect(self.timeProgress)
+        self.t1.start(100)
+        self.show()
+        _translate = QtCore.QCoreApplication.translate
+        self.msg.setText(_translate("Dialog",msg))
+        # self.app.exec_()
+        return 0
 
-if __name__ == "__main__":
+def msgBox(seconds,msg):
+    app = QApplication(sys.argv)
     dlg=Ui_Dialog()
-    dlg.msgBox(5,"sss")
+    dlg.show()
+    app.exec_()
+    # return dlg.msgBox(seconds,msg)
+if __name__ == "__main__":
+    # dlg=Ui_Dialog()
+    app = QApplication(sys.argv)
+    w = Ui_Dialog()
+    w.msgBox(3,"hahahahha")
+    sys.exit(app.exec_())

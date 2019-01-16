@@ -9,14 +9,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-
+import json
 import serialThread
 from cameraThread import CameraThread
 from mainWindows import Ui_MainWindow
 from requestThread import RequestThread
 from serialThread import SerialThread
 from uploadThread import UploadThread
-
+from dialog import Ui_Dialog as messageBox
+import dialog 
 import logging
 logging.basicConfig(level = logging.INFO,format = '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s')
 logger = logging.getLogger(__name__)
@@ -138,12 +139,14 @@ class mainExec(QObject):
         logger.info("体检结束##SC500003\r\n")
         logger.info(str)
         result = json.loads(str)
-        if result["code"]!="1000":
-            logger.info("上传失败，请重新体检")
+        if result["errorcode"]!="1000":
+            logger.info("上传失败，请重新体检##SC500004")
             self.serial.send("##SC500004\r\n")
+            # messageBox.msgBox(3,"上传失败，请重新体检")
         else:
-            logger.info("上传成功，体检结束")
+            logger.info("上传成功，体检结束##SC500003\r\n")
             self.serial.send("##SC500003\r\n")
+            # messageBox.msgBox(3,"上传成功，体检结束")
 
     def shotShetai(self):
         # global shetaiCount,timerShetai
@@ -171,6 +174,19 @@ class mainExec(QObject):
             self.finishFlag[7]= 1
             self.serial.send("##SC500012\r\n")
             self.shetaiCount = 0
+
+            if sum(self.finishFlag) == 8:
+                logger.info("（deprecated）基础数据完成##SCF00000\r\n")
+                self.serial.send("##SCF00000\r\n")
+                # 提交上传线程
+                self.upload = UploadThread()
+                self.upload.setData(self.heathData)
+                self.upload._signal.connect(self.uploadProgress)
+                self.upload.start()
+
+            self.ticeFlag = False
+            self.finishFlag = [0, 0, 0, 0, 0, 0, 0, 0]
+
             font = QtGui.QFont()
             font.setPointSize(26)
             self.ui.label_tips.setFont(font)
@@ -184,16 +200,25 @@ class mainExec(QObject):
     def getUserinfo1(self, result):
         # 人脸识别失败，发送##SC500021\r\n告诉单片机状态
         # 人脸识别成功，发送##SC500011\r\n告诉单片机状态
-        logger.info("人脸识别")
+        self.msgbox = messageBox()
+        self.msgbox.msgBox(3,"正在进行人脸识别，请稍后。。")
+        # msgbox = messageBox()
+        # msgbox.show()
+        # dialog.msgBox(2,"w12121")
+        # logger.info("人脸识别")
         if result["result"]=="Error":
             logger.info("To:人脸识别失败：##SC500021\r\n")
             self.serial.send("##SC500021\r\n")
+            self.msgbox = messageBox()
+            self.msgbox.msgBox(3,"人脸识别失败")
         else:
             # 置位脸部，人脸识别
             self.finishFlag[5] =1
             self.finishFlag[6] =1
             logger.info("To:人脸识别成功：##SC500011\r\n")
             self.serial.send("##SC500011\r\n")
+            self.msgbox = messageBox()
+            self.msgbox.msgBox(3,"人脸识别成功")
         # 显示人脸识别结果到界面
         self.ui.lineEdit_Name.setText(result["userName"])
         self.ui.lineEdit_ID.setText(result["userId"])
@@ -219,11 +244,11 @@ class mainExec(QObject):
         # ui.lineEdit_Name.setText("曹红伟")
     # 处理全局错误
     def errorCallback(self,message):
-        
-        
-        print("全局错误：" + message.__str__())
+        self.msgbox = messageBox()
+        self.msgbox.msgBox(3,str(message))
+        logger.info("全局错误：" + message.__str__())        
+        # print("全局错误：" + message.__str__())
     def main(self):
-
         #     启动相机0线程
         #     camera = CameraThread(0)
         self.camera._signal.connect(self.cameraProgress)
