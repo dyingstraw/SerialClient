@@ -4,12 +4,15 @@ from PyQt5.QtGui import *
 import json
 from requests_toolbelt import MultipartEncoder
 import requests
-
+import logging
+logging.basicConfig(level = logging.INFO,format = '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s')
+logger = logging.getLogger(__name__)
 
 class UploadThread(QThread):
     _signal = pyqtSignal(str)
 
     def __init__(self):
+        logger.debug("上传线程初始化")
         super(UploadThread, self).__init__()
 
     def setData(self, dict_):

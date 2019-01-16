@@ -1,18 +1,25 @@
+import random
+import sys
+import threading
+import time
 from concurrent.futures import ThreadPoolExecutor
-import serialThread
-import time, threading
+
 import cv2
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-import sys
-from mainWindows import Ui_MainWindow
+from PyQt5.QtWidgets import *
+
+import serialThread
 from cameraThread import CameraThread
-from serialThread import SerialThread
+from mainWindows import Ui_MainWindow
 from requestThread import RequestThread
+from serialThread import SerialThread
 from uploadThread import UploadThread
-import random
+
+import logging
+logging.basicConfig(level = logging.INFO,format = '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s')
+logger = logging.getLogger(__name__)
 
 
 class mainExec(QObject):
@@ -27,6 +34,7 @@ class mainExec(QObject):
         self.serial = SerialThread("com2")
         self.camera = CameraThread(0)
         self.shetaiCount = 0
+        
         # 体检数据存储在这里
         self.heathData = {
             "mid": "0",
@@ -37,6 +45,7 @@ class mainExec(QObject):
         }
 
         super(mainExec, self).__init__()
+        self.timerShetai=QTimer(self)
 
     def createUserHealth(self, instr):
         r = (bytes(instr[5], "utf-8")[0] - b"0" [0]) * 100
@@ -60,6 +69,8 @@ class mainExec(QObject):
         # 第0步：单片机制动开始测量
         if str[4] == "0" and str[5] == "1":
             self.ticeFlag = True
+            self.finishFlag[0] = 1
+            logger.info("deprecated有人来了，发送##SC500000\r\n给单片机")
             # 检测到有人就开始了，发送指令，让单片机自由测量
             self.serial.send("##SC500000\r\n")
         # 单片机主动关闭测量
@@ -88,26 +99,51 @@ class mainExec(QObject):
                 value = self.createUserHealth(str)
                 self.heathData['xinlv'] = value
                 self.ui.lcdNumber_xinlv.setProperty("value", value)
-
+            # 单片机发送开始拍摄舌苔的指令 ##SC500002\r\n
+            if instr[4] == '5' and instr[9]=='2' and instr[8]=='0':
+                # 捕捉舌苔
+                # 设置提示可见
+                logger.info("收到舌苔指令")
+                self.ui.label_tips.setVisible(True)
+                logger.info(threading.currentThread().getName())
+                # self.timerShetai = QTimer(self)
+                self.timerShetai.timeout.connect(self.shotShetai)
+                self.timerShetai.start(1000)
+                logger.info(self.timerShetai)
+                
         # 测量完成(主动动判断)
-        if sum(self.finishFlag) == 4:
+        if sum(self.finishFlag) == 8:
+            logger.info("（deprecated）基础数据完成##SCF00000\r\n")
             self.serial.send("##SCF00000\r\n")
+            # 提交上传线程
+            self.upload = UploadThread()
+            self.upload.setData(self.heathData)
+            self.upload._signal.connect(self.uploadProgress)
+            self.upload.start()
+
             self.ticeFlag = False
             self.finishFlag = [0, 0, 0, 0, 0, 0, 0, 0]
 
-            # 捕捉舌苔
+            # # 捕捉舌苔
+            # # 设置提示可见
+            # self.ui.label_tips.setVisible(True)
+            # self.timerShetai = QTimer(self)
 
-            # 设置提示可见
-            self.ui.label_tips.setVisible(True)
-            self.timerShetai = QTimer(self)
-
-            self.timerShetai.timeout.connect(self.shotShetai)
-            self.timeId = self.timerShetai.start(1000)
+            # self.timerShetai.timeout.connect(self.shotShetai)
+            # self.timeId = self.timerShetai.start(1000)
 
     def uploadProgress(self, str):
         # 告诉单片机体检流程全部结束
-        self.serial.send("##SC500003\r\n")
-        print(str)
+        # 上传结束
+        logger.info("体检结束##SC500003\r\n")
+        logger.info(str)
+        result = json.loads(str)
+        if result["code"]!="1000":
+            logger.info("上传失败，请重新体检")
+            self.serial.send("##SC500004\r\n")
+        else:
+            logger.info("上传成功，体检结束")
+            self.serial.send("##SC500003\r\n")
 
     def shotShetai(self):
         # global shetaiCount,timerShetai
@@ -118,17 +154,22 @@ class mainExec(QObject):
         self.ui.label_tips.setText(str(5 - self.shetaiCount))
         self.camera.setMode("shetai" + str(self.shetaiCount))
         # 正在测舌苔
+        logger.info("To:正在测舌苔##SC500002\r\n")
         self.serial.send("##SC500002\r\n")
         if (self.shetaiCount > 5):
+            logger.info(threading.currentThread().getName())
+            try:
+                # self.timerShetai.killTimer()
+                # self.killTimer(self.timerShetai.timerId())
+                self.timerShetai.stop()
+            except Exception as e:
+                logger.debug(e)
+                raise e
             self.timerShetai.stop()
-            # 体检结束结束
-            self.serial.send("##SC500003\r\n")
-            # 提交上传线程
-            upload = UploadThread()
-            upload.setData(self.heathData)
-            upload._signal.connect(self.uploadProgress)
-            upload.start()
-
+            # 告诉下位机拍摄舌苔完成
+            logger.info("To:舌苔测量完成####SC500012\r\n")
+            self.finishFlag[7]= 1
+            self.serial.send("##SC500012\r\n")
             self.shetaiCount = 0
             font = QtGui.QFont()
             font.setPointSize(26)
@@ -141,21 +182,46 @@ class mainExec(QObject):
         self.ui.label_Video.setPixmap(jpg)
         # ui.lcdNumber_shengao.setProperty("value", random.random())
     def getUserinfo1(self, result):
+        # 人脸识别失败，发送##SC500021\r\n告诉单片机状态
+        # 人脸识别成功，发送##SC500011\r\n告诉单片机状态
+        logger.info("人脸识别")
+        if result["result"]=="Error":
+            logger.info("To:人脸识别失败：##SC500021\r\n")
+            self.serial.send("##SC500021\r\n")
+        else:
+            # 置位脸部，人脸识别
+            self.finishFlag[5] =1
+            self.finishFlag[6] =1
+            logger.info("To:人脸识别成功：##SC500011\r\n")
+            self.serial.send("##SC500011\r\n")
+        # 显示人脸识别结果到界面
         self.ui.lineEdit_Name.setText(result["userName"])
         self.ui.lineEdit_ID.setText(result["userId"])
         self.ui.textEdit_Other.setText(result["result"])
+        self.ui.pushButton_getinfo.setText("人脸识别")
+        self.ui.pushButton_getinfo.setDisabled(False)
 
     # 按钮按下事件回调函数
     def getUserinfo(self):
         self.camera.setMode("detect")
+        self.ui.pushButton_getinfo.setText("正在识别，请稍后...")
+        self.ui.pushButton_getinfo.setDisabled(True)
+        # msg_box = QMessageBox.information(self.MainWindow,"提示","hhhhhh")
+        # print("12121:",msg_box)
         # 第2步：正在测面部以及识别个人信息
+        logger.info("To:正在准备人脸识别：##SC500001\r\n")
         self.serial.send("##SC500001\r\n")
         self.re = RequestThread()
+        self.re._signalError.connect(self.errorCallback)
         self.re._signal.connect(self.getUserinfo1)
         self.re.start()
 
         # ui.lineEdit_Name.setText("曹红伟")
-
+    # 处理全局错误
+    def errorCallback(self,message):
+        
+        
+        print("全局错误：" + message.__str__())
     def main(self):
 
         #     启动相机0线程
@@ -165,6 +231,7 @@ class mainExec(QObject):
         #     启动串口线程,波特率105200，串口2
         #     serial = SerialThread("com2")
         self.serial._signal.connect(self.serialProgress)
+        # self.serial._signalError.connect(lambda x: print("全局错误：" ,x))
         self.serial.start()
 
         # 注册鼠标点击事件

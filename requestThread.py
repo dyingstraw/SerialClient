@@ -4,10 +4,12 @@ from PyQt5.QtGui import *
 import json
 from requests_toolbelt import MultipartEncoder
 import requests
+from public import PUBLIC
 
 
 class RequestThread(QThread):
     _signal = pyqtSignal(dict)
+    _signalError = pyqtSignal(dict)
 
     def __init__(self):
 
@@ -26,10 +28,13 @@ class RequestThread(QThread):
                          'image/jpeg')  #mmexport1541509631472.jpg
             })
         url = "https://api.mybcfuture.com/ns/face"
-
-        response = requests.post(
-            url, data=m, headers={'Content-Type': m.content_type},
-            timeout=10)  #files=files0
+        try:
+            response = requests.post(
+                url, data=m, headers={'Content-Type': m.content_type},
+                timeout=10)  #files=files0
+        except:
+            # 人脸识别失败，发信号
+            self._signalError.emit(PUBLIC.FACE_DETECT_ERROR)
         try:
             faceDict = json.loads(response.text)
             print(faceDict)
@@ -46,6 +51,7 @@ class RequestThread(QThread):
                         "userName": "#######",
                         "result": "Error"
                     })
+                    self._signalError.emit(PUBLIC.FACA_DETECT_ERROR)
                     print("json errorr")
                     raise
                 # raise  Exception("json error")

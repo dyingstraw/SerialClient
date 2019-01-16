@@ -3,16 +3,24 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-
+from public import PUBLIC
 
 class SerialThread(QThread):
 
     _signal = pyqtSignal(str)
+    _signalError = pyqtSignal(dict)
 
     def __init__(self, comName):
-        self.ser = serial.Serial(comName, baudrate=115200, timeout=0.1)
-        print("worked in ", self.ser.portstr)
         super(SerialThread, self).__init__()
+        # self._signalError.emit(PUBLIC.SERIAL_OPEN_ERROR)
+        try:
+            self.ser = serial.Serial(comName, baudrate=115200, timeout=0.1)
+            print("worked in ", self.ser.portstr)
+        except Exception as e:
+            raise e
+        
+        
+        
 
     def run(self):
         print("serialThread is running!")
