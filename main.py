@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import *
 import json
 import serialThread
 from cameraThread import CameraThread
-from mainWindows import Ui_MainWindow
+from mainWindows_ui import Ui_MainWindow
 from requestThread import RequestThread
 from serialThread import SerialThread
 from uploadThread import UploadThread

@@ -30,6 +30,12 @@ class Ui_Dialog(QMainWindow):
         self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setWindowOpacity(0.8)
         # Dialog.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
+        # self.btn1 = QPushButton(Dialog)
+        # self.btn1.setGeometry(QtCore.QRect(0, 250, 201, 41))
+        # self.btn1.setText("hhhhhhh")
+        # self.setBtnQss(self.btn1,"#34495E", "#FFFFFF", "#4E6D8C", "#F0F0F0", "#2D3E50", "#B8C6D1")
+
+
         self.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)  
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
         self.buttonBox.setGeometry(QtCore.QRect(390, 250, 201, 41))
@@ -55,7 +61,10 @@ class Ui_Dialog(QMainWindow):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.msg.setText(_translate("Dialog", "提示：这是一个提示框"))
+
+        # self.setBtnQss("#34495E", "#FFFFFF", "#4E6D8C", "#F0F0F0", "#2D3E50", "#B8C6D1")
     def timeProgress(self):
+        
         if(self.timeBar.value()<=10):
             self.reject()
             self.t1.stop()
@@ -76,6 +85,14 @@ class Ui_Dialog(QMainWindow):
         self.msg.setText(_translate("Dialog",msg))
         # self.app.exec_()
         return 0
+    def  setBtnQss(self,btn,normalColor,normalTxtColor,hoverColor,hoverTxtColor,pressedColor,pressedTxtColor):
+        qss=""
+        qss+="QPushButton{border-style:none;padding:10px;border-radius:5px;color:%s;background:%s;}"%(normalTxtColor,normalTxtColor)
+        qss+="QPushButton:hover{color:%s;background:%s;}"%(hoverTxtColor,hoverColor)
+        qss+="QPushButton:pressed{color:%s;background:%s;}"%(pressedTxtColor,pressedColor)
+        btn.setStyleSheet(qss)
+
+
 
 def msgBox(seconds,msg):
     app = QApplication(sys.argv)
