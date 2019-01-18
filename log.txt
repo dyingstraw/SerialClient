@@ -1,0 +1,6 @@
+main.py in 265 Lines: MainThread-28436, 2019-01-18 11:59:44 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-18804, 2019-01-18 11:59:45 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-18804, 2019-01-18 11:59:47 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 246 Lines: MainThread-28436, 2019-01-18 11:59:47 - root - INFO:To:人脸识别成功：##SC500011
+

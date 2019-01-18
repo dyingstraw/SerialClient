@@ -19,8 +19,25 @@ from uploadThread import UploadThread
 from dialog import Ui_Dialog as messageBox
 import dialog 
 import logging
-logging.basicConfig(level = logging.INFO,format = '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s')
-logger = logging.getLogger(__name__)
+# logging.basicConfig(filename="alog.log",filemode='a',level = logging.DEBUG,format = '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s')
+# 不要有名字
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter(
+    '%(filename)s in %(lineno)d Lines: %(threadName)s-%(thread)d, %(asctime)s - %(name)s - %(levelname)s:%(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S')
+# 使用FileHandler输出到文件
+fh = logging.FileHandler('log.txt')
+fh.setLevel(logging.DEBUG)
+fh.setFormatter(formatter)
+# 使用StreamHandler输出到屏幕
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+ch.setFormatter(formatter)
+
+# 添加两个Handler
+logger.addHandler(ch)
+logger.addHandler(fh)
 
 
 class mainExec(QObject):
