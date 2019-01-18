@@ -27,7 +27,7 @@ class RequestThread(QThread):
                 "file": ('temp_detect.jpg', open("temp/temp_detect.jpg", 'rb'),
                          'image/jpeg')  #mmexport1541509631472.jpg
             })
-        url = "人脸识别请求接口"
+        url = "https://api.mybcfuture.com/ns/face"
         try:
             response = requests.post(
                 url, data=m, headers={'Content-Type': m.content_type},

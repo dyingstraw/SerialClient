@@ -148,6 +148,18 @@ class mainExec(QObject):
             self.serial.send("##SC500003\r\n")
             # messageBox.msgBox(3,"上传成功，体检结束")
 
+        # qing 0
+        self.ui.lineEdit_ID.setText("")
+        self.ui.lineEdit_Name.setText("")
+        self.ui.lineEdit_Sex.setText("")
+        self.ui.textEdit_Other.setText("")
+        self.ui.lcdNumber_xinlv.setProperty("value",0)
+        self.ui.lcdNumber_tiwen.setProperty("value",0)
+        self.ui.lcdNumber_shengao.setProperty("value",0)
+        self.ui.lcdNumber_tizhong.setProperty("value",0)
+        self.msgbox = messageBox()
+        self.msgbox.msgBox(5,"体检结束")
+
     def shotShetai(self):
         # global shetaiCount,timerShetai
         self.shetaiCount += 1

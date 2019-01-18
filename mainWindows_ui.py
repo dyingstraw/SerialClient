@@ -642,6 +642,7 @@ class Ui_MainWindow(QObject):
         self.lcdNumber_timer.setProperty("value", 0.0)
         self.lcdNumber_timer.setProperty("intValue", 0)
         self.lcdNumber_timer.setObjectName("lcdNumber_timer")
+        self.lcdNumber_timer.setVisible(False)
         self.verticalLayout_5.addWidget(self.lcdNumber_timer)
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         font = QtGui.QFont()
@@ -668,6 +669,7 @@ class Ui_MainWindow(QObject):
 
         self.label_tips.setGeometry(QtCore.QRect(0, 0, 591, 421))
         self.label_tips.setAutoFillBackground(True)
+        self.label_tips.setStyleSheet("background:rgba(0,0,0,0.5)")
 
         self.label_tips.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.label_tips.setAlignment(QtCore.Qt.AlignCenter)
@@ -697,5 +699,6 @@ class Ui_MainWindow(QObject):
         self.label_2.setText(_translate("MainWindow", "体温"))
         self.label_3.setText(_translate("MainWindow", "身高"))
         self.label_4.setText(_translate("MainWindow", "体重"))
-        self.label_5.setText(_translate("MainWindow", "倒计时"))
+        # self.label_5.setText(_translate("MainWindow", "倒计时"))
+        self.label_5.setText(_translate("MainWindow", ""))
 
