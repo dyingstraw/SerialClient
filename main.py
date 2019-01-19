@@ -86,6 +86,8 @@ class mainExec(QObject):
             return
         # 第0步：单片机制动开始测量
         if str[4] == "0" and str[5] == "1":
+            # 开始监控有没有出现人脸
+            self.camera.setFaceFlag(True)
             self.ticeFlag = True
             self.finishFlag[0] = 1
             logger.info("deprecated有人来了，发送##SC500000\r\n给单片机")
@@ -245,6 +247,7 @@ class mainExec(QObject):
             self.serial.send("##SC500021\r\n")
             self.msgbox = messageBox()
             self.msgbox.msgBox(3,"人脸识别失败")
+            self.camera.setFaceFlag(True)
         else:
             # 置位脸部，人脸识别
             self.finishFlag[5] =1
@@ -262,6 +265,9 @@ class mainExec(QObject):
 
     # 按钮按下事件回调函数
     def getUserinfo(self):
+        # 停止人脸标记
+        self.camera.setFaceFlag(False)
+
         self.msgbox = messageBox()
         self.msgbox.msgBox(3,"正在进行人脸识别，请稍后。。")
         self.camera.setMode("detect")
@@ -278,6 +284,10 @@ class mainExec(QObject):
         self.re.start()
 
         # ui.lineEdit_Name.setText("曹红伟")
+
+
+    def cameraMessage(self,str):
+        logger.info("人脸：" + str) 
     # 处理全局错误
     def errorCallback(self,message):
         self.msgbox = messageBox()
@@ -288,6 +298,8 @@ class mainExec(QObject):
         #     启动相机0线程
         #     camera = CameraThread(0)
         self.camera._signal.connect(self.cameraProgress)
+        self.camera._signalDetectFace.connect(self.getUserinfo)
+        self.camera._signalMessage.connect(self.cameraMessage)
         self.camera.start()
         #     启动串口线程,波特率105200，串口2
         #     serial = SerialThread("com2")

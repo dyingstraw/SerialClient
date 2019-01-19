@@ -16,3 +16,329 @@ connectionpool.py in 818 Lines: Dummy-9-21252, 2019-01-19 17:11:29 - requests.pa
 connectionpool.py in 395 Lines: Dummy-9-21252, 2019-01-19 17:11:31 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
 main.py in 252 Lines: MainThread-11764, 2019-01-19 17:11:31 - root - INFO:To:人脸识别成功：##SC500011
 
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:11 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:11 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:11 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:11 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:11 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-22876, 2019-01-19 19:43:12 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-9-424, 2019-01-19 19:43:12 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-10-22204, 2019-01-19 19:43:12 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-11-20852, 2019-01-19 19:43:12 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:12 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-12-3448, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-13-12172, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-14-21256, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-15-21604, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-16-23336, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-17-1868, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-18-21508, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-19-21448, 2019-01-19 19:43:13 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:13 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-20-22824, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-21-21476, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-22-19728, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-23-12348, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-24-8976, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-25-8456, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-26-18312, 2019-01-19 19:43:14 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-27-23036, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-28-19304, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-29-18216, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-30-22060, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-31-4248, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-32-19716, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-33-22340, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:15 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-34-21688, 2019-01-19 19:43:15 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-35-23212, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-36-22124, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-37-8488, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-38-14576, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-39-21168, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-13-12172, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-8-22876, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-25-8456, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-19-21448, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-26-18312, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-24-8976, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-27-23036, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-18-21508, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-14-21256, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-40-22504, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:16 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 818 Lines: Dummy-41-18740, 2019-01-19 19:43:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 818 Lines: Dummy-42-8700, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-43-5732, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 818 Lines: Dummy-44-17700, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 395 Lines: Dummy-33-22340, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-34-21688, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-32-19716, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 395 Lines: Dummy-36-22124, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 395 Lines: Dummy-37-8488, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+connectionpool.py in 818 Lines: Dummy-45-3788, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-46-22892, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 818 Lines: Dummy-47-2140, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 395 Lines: Dummy-9-424, 2019-01-19 19:43:17 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:17 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 818 Lines: Dummy-48-3028, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-41-18740, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-49-21640, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:人脸识别失败：##SC500021
+
+connectionpool.py in 395 Lines: Dummy-42-8700, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 395 Lines: Dummy-40-22504, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+connectionpool.py in 395 Lines: Dummy-43-5732, 2019-01-19 19:43:18 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 244 Lines: MainThread-23116, 2019-01-19 19:43:18 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 273 Lines: MainThread-23116, 2019-01-19 19:43:19 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-50-4256, 2019-01-19 19:43:19 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 278 Lines: MainThread-12184, 2019-01-19 19:50:41 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-23472, 2019-01-19 19:50:42 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-23472, 2019-01-19 19:50:46 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 254 Lines: MainThread-12184, 2019-01-19 19:50:46 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 278 Lines: MainThread-20848, 2019-01-19 19:53:47 - root - INFO:To:正在准备人脸识别：##SC500001
+
+main.py in 278 Lines: MainThread-20848, 2019-01-19 19:53:47 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-21256, 2019-01-19 19:53:48 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 818 Lines: Dummy-9-8700, 2019-01-19 19:53:48 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-21256, 2019-01-19 19:53:52 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 254 Lines: MainThread-20848, 2019-01-19 19:53:52 - root - INFO:To:人脸识别成功：##SC500011
+
+connectionpool.py in 395 Lines: Dummy-9-8700, 2019-01-19 19:53:53 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 254 Lines: MainThread-20848, 2019-01-19 19:53:53 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 278 Lines: MainThread-17588, 2019-01-19 19:55:03 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-23448, 2019-01-19 19:55:04 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-23448, 2019-01-19 19:55:13 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 254 Lines: MainThread-17588, 2019-01-19 19:55:13 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 278 Lines: MainThread-17588, 2019-01-19 19:56:09 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-10976, 2019-01-19 19:56:10 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-10976, 2019-01-19 19:56:12 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 254 Lines: MainThread-17588, 2019-01-19 19:56:12 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 278 Lines: MainThread-23576, 2019-01-19 20:04:29 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-22976, 2019-01-19 20:04:30 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-22976, 2019-01-19 20:04:32 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 246 Lines: MainThread-23576, 2019-01-19 20:04:32 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 279 Lines: MainThread-8700, 2019-01-19 20:10:09 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-24096, 2019-01-19 20:10:10 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 291 Lines: MainThread-8700, 2019-01-19 20:10:21 - root - INFO:全局错误：{'code': 2001, 'message': '人脸识别失败'}
+main.py in 246 Lines: MainThread-8700, 2019-01-19 20:10:21 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 279 Lines: MainThread-8700, 2019-01-19 20:10:21 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-4432, 2019-01-19 20:10:22 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-4432, 2019-01-19 20:10:27 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-8700, 2019-01-19 20:10:28 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 279 Lines: MainThread-24104, 2019-01-19 20:11:21 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-23572, 2019-01-19 20:11:22 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 291 Lines: MainThread-24104, 2019-01-19 20:11:32 - root - INFO:全局错误：{'code': 2001, 'message': '人脸识别失败'}
+main.py in 246 Lines: MainThread-24104, 2019-01-19 20:11:32 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 279 Lines: MainThread-24104, 2019-01-19 20:11:33 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-2320, 2019-01-19 20:11:34 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-2320, 2019-01-19 20:11:35 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-24104, 2019-01-19 20:11:35 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 279 Lines: MainThread-12892, 2019-01-19 20:12:38 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-23776, 2019-01-19 20:12:39 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 291 Lines: MainThread-12892, 2019-01-19 20:12:49 - root - INFO:全局错误：{'code': 2001, 'message': '人脸识别失败'}
+main.py in 246 Lines: MainThread-12892, 2019-01-19 20:12:49 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 279 Lines: MainThread-12892, 2019-01-19 20:12:49 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-9752, 2019-01-19 20:12:50 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-9752, 2019-01-19 20:12:52 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-12892, 2019-01-19 20:12:52 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 93 Lines: MainThread-12892, 2019-01-19 20:14:31 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 279 Lines: MainThread-12892, 2019-01-19 20:14:32 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-10-6852, 2019-01-19 20:14:33 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-10-6852, 2019-01-19 20:14:35 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-12892, 2019-01-19 20:14:35 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 279 Lines: MainThread-24348, 2019-01-19 20:20:42 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-22696, 2019-01-19 20:20:43 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-22696, 2019-01-19 20:20:44 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-24348, 2019-01-19 20:20:44 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 93 Lines: MainThread-24348, 2019-01-19 20:20:49 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 279 Lines: MainThread-24348, 2019-01-19 20:20:50 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-24056, 2019-01-19 20:20:51 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-24056, 2019-01-19 20:20:52 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-24348, 2019-01-19 20:20:52 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 279 Lines: MainThread-19324, 2019-01-19 21:22:59 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-25588, 2019-01-19 21:23:00 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-25588, 2019-01-19 21:23:01 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-19324, 2019-01-19 21:23:01 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 93 Lines: MainThread-5668, 2019-01-19 21:23:46 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 93 Lines: MainThread-18932, 2019-01-19 21:24:39 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 279 Lines: MainThread-18932, 2019-01-19 21:24:39 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-6004, 2019-01-19 21:24:40 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-8-6004, 2019-01-19 21:24:41 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 500 None
+main.py in 246 Lines: MainThread-18932, 2019-01-19 21:24:41 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 279 Lines: MainThread-18932, 2019-01-19 21:24:41 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-12760, 2019-01-19 21:24:42 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-12760, 2019-01-19 21:24:43 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-18932, 2019-01-19 21:24:43 - root - INFO:To:人脸识别成功：##SC500011
+
+main.py in 93 Lines: MainThread-23288, 2019-01-19 21:35:40 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 93 Lines: MainThread-12348, 2019-01-19 21:36:45 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 93 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:deprecated有人来了，发送##SC500000
+给单片机
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:人脸：don't move
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:人脸：don't move
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:人脸：don't move
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:人脸：don't move
+main.py in 279 Lines: MainThread-23072, 2019-01-19 21:37:14 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-8-20168, 2019-01-19 21:37:16 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+main.py in 295 Lines: MainThread-23072, 2019-01-19 21:37:26 - root - INFO:全局错误：{'code': 2001, 'message': '人脸识别失败'}
+main.py in 246 Lines: MainThread-23072, 2019-01-19 21:37:26 - root - INFO:To:人脸识别失败：##SC500021
+
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:26 - root - INFO:人脸：don't move
+main.py in 290 Lines: MainThread-23072, 2019-01-19 21:37:26 - root - INFO:人脸：don't move
+main.py in 279 Lines: MainThread-23072, 2019-01-19 21:37:26 - root - INFO:To:正在准备人脸识别：##SC500001
+
+connectionpool.py in 818 Lines: Dummy-9-22436, 2019-01-19 21:37:27 - requests.packages.urllib3.connectionpool - DEBUG:Starting new HTTPS connection (1): api.mybcfuture.com
+connectionpool.py in 395 Lines: Dummy-9-22436, 2019-01-19 21:37:28 - requests.packages.urllib3.connectionpool - DEBUG:https://api.mybcfuture.com:443 "POST /ns/face HTTP/1.1" 200 None
+main.py in 255 Lines: MainThread-23072, 2019-01-19 21:37:28 - root - INFO:To:人脸识别成功：##SC500011
+
