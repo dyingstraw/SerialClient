@@ -128,6 +128,12 @@ class mainExec(QObject):
                 self.timerShetai.timeout.connect(self.shotShetai)
                 self.timerShetai.start(1000)
                 logger.info(self.timerShetai)
+            # 单片机调用人脸识别
+            if instr[4] == '5' and instr[9]=='3' and instr[8]=='0':
+                # 捕捉舌苔
+                # 设置提示可见
+                logger.info("收到人脸识别指令")
+                self.getUserinfo()
                 
         # 测量完成(主动动判断)
         if sum(self.finishFlag) == 8:
@@ -229,8 +235,7 @@ class mainExec(QObject):
     def getUserinfo1(self, result):
         # 人脸识别失败，发送##SC500021\r\n告诉单片机状态
         # 人脸识别成功，发送##SC500011\r\n告诉单片机状态
-        self.msgbox = messageBox()
-        self.msgbox.msgBox(3,"正在进行人脸识别，请稍后。。")
+        
         # msgbox = messageBox()
         # msgbox.show()
         # dialog.msgBox(2,"w12121")
@@ -257,6 +262,8 @@ class mainExec(QObject):
 
     # 按钮按下事件回调函数
     def getUserinfo(self):
+        self.msgbox = messageBox()
+        self.msgbox.msgBox(3,"正在进行人脸识别，请稍后。。")
         self.camera.setMode("detect")
         self.ui.pushButton_getinfo.setText("正在识别，请稍后...")
         self.ui.pushButton_getinfo.setDisabled(True)
